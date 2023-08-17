@@ -16,7 +16,7 @@ db = SQLAlchemy(app)
 migrate = Migrate(app, db)
 
 # models
-from api.main.model.user import User
+import api.main.model
 
 # api
 api = Api(app)
