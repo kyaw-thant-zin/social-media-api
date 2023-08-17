@@ -4,7 +4,7 @@ from flask_restful import Api
 from api.main.resources.dashboard_resources import DashboardIndexResource
 
 def register_routes(api):
-    api.add_resource(DashboardIndexResource, '/api/dashboard')
+    api.add_resource(DashboardIndexResource, '/dashboard')
 
 
 api = Api()

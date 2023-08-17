@@ -19,7 +19,7 @@ migrate = Migrate(app, db)
 import api.main.model
 
 # api
-api = Api(app)
+api = Api(app, prefix='/api')
 
 # routes
 register_routes(api)
