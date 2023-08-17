@@ -1,6 +1,7 @@
 from flask import Flask
 from flask_restful import Api
 from config import api_config
+from api.main.routes import register_routes
 
 
 app = Flask(__name__)
