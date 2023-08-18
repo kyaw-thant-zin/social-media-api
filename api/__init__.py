@@ -1,9 +1,11 @@
 from flask import Flask
 from flask_restful import Api
 from flask_cors import CORS
-from config import api_config
 from flask_sqlalchemy import SQLAlchemy
 from flask_migrate import Migrate
+from flask_jwt_extended import JWTManager
+
+from config import api_config
 from api.main.routes import register_routes
 
 # app
@@ -14,6 +16,9 @@ CORS(app=app, origins=["*"])
 
 # config
 app.config.from_object(api_config['development'])  # Change to 'production' for production
+
+# JWT
+jwt = JWTManager(app=app)
 
 # database
 db = SQLAlchemy(app)
