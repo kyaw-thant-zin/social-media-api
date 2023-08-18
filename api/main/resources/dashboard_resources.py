@@ -1,5 +1,8 @@
+
 from flask_restful import Resource
 from api.main.middleware.auth import authenticate
+
+from playwright.sync_api import Playwright, sync_playwright
 
 from api.main.services import SocialMediaService
 
